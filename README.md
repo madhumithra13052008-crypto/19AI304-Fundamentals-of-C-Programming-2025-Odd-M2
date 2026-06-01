@@ -15,7 +15,7 @@
   
   The program should display the average marks up to two decimal places and the corresponding grade. 
   
-# Date : 
+# Date : 24-04-2026
 # Aim:
  To build a C program that receives inputs for a student’s marks in three subjects, calculates the average, and determines the grade using nested if-else statements with safe floating-point comparisons.
 # Algorithm:
@@ -56,7 +56,28 @@
 ### Step 11:
   Stop
 # Program:
+```
+#include<stdio.h>
+int main(){
+    float math,science,english,average;
+    printf("Enter marks for Math, Science and English: ");
+    scanf("%f %f %f",&math,&science,&english);
+    average=(math+science+english)/3.0f;
+    if(average>=90.0f)
+        printf("Grade A\n");
+    else if(average>=75.0f)
+        printf("Grade B\n");
+    else if(average>=50.0f)
+        printf("Grade C\n");
+    else
+        printf("Grade F\n");
+    return 0;
+}
+```
 # Output:
+
+<img width="706" height="243" alt="Screenshot 2026-05-26 132719" src="https://github.com/user-attachments/assets/09ca2d9f-29dd-46ae-8bb9-d3a241c502f5" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -88,7 +109,20 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+```
+#include<stdio.h>
+int main(){
+    int number=15,i;
+    for(i=1;i<=10;i++){
+        printf("%d x %d = %d\n",number,i,number*i);
+    }
+    return 0;
+}
+```
 # Output:
+
+<img width="518" height="417" alt="Screenshot 2026-05-26 132802" src="https://github.com/user-attachments/assets/b86bfedd-ec8b-4496-ba7e-448c66e66beb" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +165,30 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+```
+#include<stdio.h>
+int main(){
+    int n, i = 2, f = 0;
+    scanf("%d", &n);
+    while(i <= n - 1){
+        if(n % i == 0){
+            f = 1;
+            break;
+        }
+        i++;
+    }
+    if(f == 0 && n > 1)
+        printf("%d is a prime number.\n", n);
+    else
+        printf("%d is not a prime number.\n", n);
+    return 0;
+}
+
+```
 # Output:
+
+<img width="302" height="149" alt="Screenshot 2026-05-26 132842" src="https://github.com/user-attachments/assets/12da1013-dc22-475f-954c-2bafef32aa29" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +236,39 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+```
+#include<stdio.h>
+
+int main(){
+    int n, i, j, k;
+    scanf("%d", &n);
+    
+    for(i = 1; i <= n; i++){
+        for(j = i; j <= n; j++){
+            if(i == 1 || j == i)
+                printf("%d", j);
+            else
+                printf(" ");
+        }
+        k = j - 2;
+        for(j = 1; j <= i - 1; j++){
+            if(i == n || j == i - 1)
+                printf("%d", k);
+            else
+                printf(" ");
+            k--;
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+```
 # Output:
+
+<img width="176" height="312" alt="Screenshot 2026-05-26 132927" src="https://github.com/user-attachments/assets/b91f157b-3507-4cb3-b8f3-8cf11c1d66b3" />
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +321,29 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+# Program
+```
+#include<stdio.h>
+
+int main(){
+    int i, j;
+    printf("0\n");
+    for(i = 7; i >= 1; i--){
+        for(j = i; j <= 7; j++)
+            printf("%d ", j);
+        printf("0 ");
+        for(j = 7; j >= i; j--)
+            printf("%d ", j);
+        printf("\n");
+    }
+    return 0;
+}
+
+```
+# output
+
+<img width="460" height="325" alt="Screenshot 2026-05-26 133032" src="https://github.com/user-attachments/assets/487ef5d7-b63c-4089-8ecd-a73cb6c0c1f2" />
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
